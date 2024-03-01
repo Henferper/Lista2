@@ -1,20 +1,34 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        int menor, meio, maior, aux;
         Scanner in = new Scanner(System.in);
+        System.out.println("Digite 3 inteiros");
+        menor = in.nextInt();
+        meio = in.nextInt();
+        maior = in.nextInt();
 
-        int valor1, valor2, valor3;
-        System.out.println("Digite o primeiro valor: ");
-        valor1 = in.nextInt();
-        System.out.println("Digite o segundo valor: ");
-        valor2 = in.nextInt();
-        System.out.println("Digite o terceiro valor: ");
-        valor3 = in.nextInt();
-
-        int[] numbers = {valor1, valor2, valor3};
-        Arrays.sort(numbers);
-        System.out.println(Arrays.toString(numbers));
+        if(maior<menor){
+            aux = menor;
+            menor = maior;
+            maior = aux;
+        }
+        if(maior<meio){
+            aux = meio;
+            meio = maior;
+            maior = aux;
+        }
+        if(meio<menor){
+            aux=menor;
+            menor=meio;
+            meio=aux;
+        }
+        System.out.println(menor+" "+ meio +" "+ maior);
     }
+}
+
 }
