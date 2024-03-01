@@ -6,6 +6,9 @@ public class Main {
 
         double preco, preco_novo,meses;
         int escolha;
+
+        System.out.println("Selecione o preço do produto");
+        preco = in.nextDouble();
         System.out.println("Menu");
         System.out.println("1.Débito");
         System.out.println("2.PIX");
@@ -16,24 +19,18 @@ public class Main {
         switch (escolha) {
             case 1://Débito
                 System.out.println("Selecionado Débito: 5% de desconto");
-                System.out.println("Selecionado o preço do produto");
-                preco = in.nextDouble();
                 preco_novo = preco * 0.95;
                 System.out.println("O preco do produto final é: R$" + preco_novo);
                 break;
 
             case 2://PIX;
                 System.out.println("Selecionado Pix: 10% de desconto");
-                System.out.println("Selecionado o preço do produto");
-                preco = in.nextDouble();
                 preco_novo = preco * 0.90;
                 System.out.println("O preco do produto final é: R$" + preco_novo);
                 break;
 
             case 3://Crédito;
                 System.out.println("Selecionado Crédito: 2% de juros até 4 meses ou 5% até mais de 4 meses de parcelamento");
-                System.out.println("Selecione o preço do produto: ");
-                preco = in.nextDouble();
                 System.out.println("Selecione quantos meses de parcelamento: ");
                 meses = in.nextDouble();
                 if (meses <= 4) {
